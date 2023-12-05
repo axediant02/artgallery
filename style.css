@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
+    background-color: grey;
     display: flex;
     flex-direction: column; /* Adjust flex direction to column */
     height: 100vh;
@@ -103,9 +103,14 @@ nav a {
     margin-right: 10px;
 }
 
+nav a:hover{
+    background-color: #555;
+
+}
+
 h1 {
     text-align: center;
-    margin-top: 50px;
+    margin-top: 23px;
 }
 
 form {
