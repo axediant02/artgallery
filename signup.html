@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sign Up</title>
+</head>
+<body>
+<h1>Sign Up</h1>
+<form id="signupForm">
+  <label>Username:</label>
+  <input type="text" id="username" name="username" required>
+  <br>
+  <label>Email:</label>
+  <input type="email" id="email" name="email" required>
+  <br>
+  <label>Password:</label>
+  <input type="password" id="password" name="password" required>
+  <br>
+  <label>Confirm Password:</label>
+  <input type="password" id="confirmPassword" name="confirmPassword" required>
+  <br>
+  <button type="submit">Sign Up</button>
+</form>
+
+<script>
+  const signupForm = document.getElementById('signupForm');
+
+  signupForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    const username = document.getElementById('username').value;
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+    const confirmPassword = document.getElementById('confirmPassword').value;
+
+    if (password !== confirmPassword) {
+      alert('Passwords do not match.');
+      return;
+    }
+
+    // Send the sign-up information to the server (simulated)
+    alert('Sign-up successful!');
+  });
+</script>
+</body>
+</html>

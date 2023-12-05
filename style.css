@@ -1,0 +1,144 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column; /* Adjust flex direction to column */
+    height: 100vh;
+}
+
+.container {
+    position: relative;
+    padding: 10%;
+    background-color: grey;
+    flex: 1; /* Add flex property to fill the remaining height */
+}
+
+#center {
+    flex: 1;
+    padding: 200px; /* Adjust padding */
+    background-color: darkgrey;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px; /* Adjust padding */
+    display: flex;
+    align-items: center;
+}
+
+nav {
+    background-color: #333;
+    padding: 10px;
+}
+
+/* Styles for individual nav bars */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Adjust display to flex */
+    justify-content: center; /* Center the nav items */
+}
+
+nav li {
+    margin-right: 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Responsive styling for smaller screens */
+@media (max-width: 768px) {
+    nav {
+        font-size: 14px;
+    }
+}
+
+.nav1 {
+    position: absolute;
+    top: 42px; /* Adjust the distance from the top */
+    right: 0;
+    background-color: #333;
+    padding: 20px; /* Adjust padding */
+    font-size: larger;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+}
+
+.nav-list li {
+    margin-right: 20px;
+}
+
+.nav-buttons {
+    display: flex;
+    align-items: center;
+}
+
+.nav-buttons button {
+    margin-left: 10px;
+}
+
+.nav2 ul {
+    list-style: none;
+    padding: 0;
+}
+
+.nav2 li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 50px;
+}
+
+form {
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #333;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #555;
+}
