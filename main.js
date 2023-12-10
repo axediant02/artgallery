@@ -1,17 +1,15 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const sections = document.querySelectorAll(".section");
+const loginButton = document.getElementById('loginButton');
+const loginForm = document.getElementById('loginForm');
 
-    function checkScroll() {
-        sections.forEach(section => {
-            const sectionTop = section.getBoundingClientRect().top;
-            const windowHeight = window.innerHeight;
+loginButton.addEventListener('click', () => {
+    loginForm.classList.toggle('hidden');
+});
 
-            if (sectionTop < windowHeight - 100) {
-                section.classList.add("appear");
-            }
-        });
-    }
+loginForm.addEventListener('submit', (event) => {
+    event.preventDefault();
 
-    window.addEventListener("scroll", checkScroll);
-    checkScroll(); // Initial check on page load
+    // Handle login logic here
+
+    // For demonstration purposes, let's just hide the form after submission
+    loginForm.classList.add('hidden');
 });
