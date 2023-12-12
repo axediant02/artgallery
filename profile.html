@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Juan Dela Cruz</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    function storeImage(image, key) {
+      // Convert image to base64 string
+      const base64Image = image.src;
+
+      // Store base64 string in local storage
+      localStorage.setItem(key, base64Image);
+    }
+
+    function retrieveImage(key) {
+      // Get base64 string from local storage
+      const base64Image = localStorage.getItem(key);
+
+      // Create image element from base64 string
+      if (base64Image) {
+        const image = new Image();
+        image.src = base64Image;
+
+        // Create a delete button for each image
+        const deleteButton = document.createElement('button');
+        deleteButton.textContent = 'Delete';
+        deleteButton.onclick = function () {
+          // Remove the image and its delete button from the DOM
+          image.remove();
+          deleteButton.remove();
+
+          // Remove the image from local storage
+          localStorage.removeItem(key);
+        };
+
+        // Add image and delete button to the DOM
+        document.body.appendChild(image);
+        document.body.appendChild(deleteButton);
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      // Call retrieveImage for the profile picture
+      retrieveImage('profileImage');
+
+      // Call retrieveImage for the dynamically added images
+      for (let i = 0; i < localStorage.length; i++) {
+        const key = localStorage.key(i);
+        if (key !== 'profileImage') {
+          retrieveImage(key);
+        }
+      }
+    });
+
+    function storeImagePreview(input) {
+      const file = input.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function (e) {
+          const preview = document.createElement('img');
+          preview.src = e.target.result;
+          preview.alt = 'Image Preview';
+
+          // Add image and delete button to the DOM
+          document.body.appendChild(preview);
+
+          const deleteButton = document.createElement('button');
+          deleteButton.textContent = 'Delete';
+          deleteButton.onclick = function () {
+            // Remove the preview and its delete button from the DOM
+            preview.remove();
+            deleteButton.remove();
+
+            // Remove the preview image from local storage
+            localStorage.removeItem('dynamicImage' + timestamp);
+          };
+
+          document.body.appendChild(deleteButton);
+
+          // Store the dynamically added image in local storage
+          const timestamp = Date.now();
+          storeImage(preview, 'dynamicImage' + timestamp);
+        };
+        reader.readAsDataURL(file);
+      }
+    }
+
+    function handleFormSubmit(event) {
+      event.preventDefault(); // Prevent the default form submission behavior
+
+      const input = document.getElementById('image');
+      storeImagePreview(input);
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <img src="https://i.imgur.com/expwe.png" alt="Profile picture">
+    <div class="header-info">
+      <h1>Juan Dela Cruz</h1>
+      <p>ARTIST</p>
+    </div>
+  </header>
+  <main>
+    <section class="about-me">
+      <h2>About Me</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ultricies sapien id nibh gravida tincidunt. Nunc porta est a dolor posuere, ac rhoncus nulla pretium. Aliquam laoreet ante ac massa pretium, a tincidunt justo malesuada. Nulla facilisi.</p>
+    </section>
+    <section class="projects">
+      <h2>DESIGNS</h2>
+      <ul>
+        Image Upload
+        <form action="upload.php" method="post" enctype="multipart/form-data" onsubmit="handleFormSubmit(event)">
+          <label for="image">Choose an image:</label>
+          <input type="file" name="image" id="image" accept="image/*" onchange="storeImagePreview(this)">
+          <input type="submit" value="Upload">
+        </form>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>

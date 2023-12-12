@@ -1,0 +1,240 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  header img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+  }
+  
+  .header-info {
+    margin-top: 20px;
+  }
+  
+  main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .about-me,
+  .projects {
+    margin-bottom: 30px;
+  }
+  
+  h2 {
+    color: #333;
+  }
+  
+  .projects ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .projects label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .projects input[type="file"] {
+    margin-bottom: 10px;
+  }
+  
+  .projects input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .projects input[type="submit"]:hover {
+    background-color: #555;
+  }
+  
+  .about-me p,
+  .projects p {
+    line-height: 1.6;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+  }
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  header img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+  }
+  
+  .header-info {
+    margin-top: 20px;
+  }
+  
+  main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .about-me,
+  .projects {
+    margin-bottom: 30px;
+  }
+  
+  h2 {
+    color: #333;
+  }
+  
+  .projects ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .projects label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .projects input[type="file"] {
+    margin-bottom: 10px;
+  }
+  
+  .projects input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .projects input[type="submit"]:hover {
+    background-color: #555;
+  }
+  
+  .about-me p,
+  .projects p {
+    line-height: 1.6;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+    display: block; /* Set images to block elements */
+    margin-bottom: 10px; /* Add margin between stacked images */
+
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  header img {
+    border-radius: 50%;
+    width: 100%; /* Make the header image responsive */
+    max-width: 150px; /* Set a max-width if needed */
+    height: auto;
+  }
+  
+  .header-info {
+    margin-top: 20px;
+  }
+  
+  main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .about-me,
+  .projects {
+    margin-bottom: 30px;
+  }
+  
+  h2 {
+    color: #333;
+  }
+  
+  .projects ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .projects label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .projects input[type="file"] {
+    margin-bottom: 10px;
+  }
+  
+  .projects input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .projects input[type="submit"]:hover {
+    background-color: #555;
+  }
+  
+  .about-me p,
+  .projects p {
+    line-height: 1.6;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  
